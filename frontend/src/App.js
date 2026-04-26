@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:8000/chat", {
+      const response = await axios.post("https://ai-chatbot-production-3b68.up.railway.app/chat", {
         message: input,
         history: history,
       });
@@ -37,7 +37,7 @@ function App() {
   };
 
   const clearMemory = async () => {
-    await axios.delete("http://localhost:8000/memory");
+    await axios.delete("https://ai-chatbot-production-3b68.up.railway.app/memory");
     alert("Long-term memory cleared!");
   };
 
